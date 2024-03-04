@@ -1,0 +1,173 @@
+How to push the code in a GITHUB
+================================
+step1:
+-----
+	Create a account in GITHUB (Source Code Management Tool).
+	ex:
+		https://github.com
+
+step2:
+------
+	Login to GITHUB account using username and password.
+	ex:
+		username : NiyazulHasan 
+		password : ........
+
+step3:
+-----
+	Create a remote repository in GITHUB.
+	ex:
+		 https://github.com/NiyazulHasan/javaproject
+
+step4:
+-----
+	Download and Install GIT software.
+	ex:
+		https://git-scm.com/downloads
+
+step5:
+-----
+	goto "java-project" folder and open git bash. 
+
+step6:
+------
+	Initialize empty git repository.
+	ex:
+		git init
+
+step7:
+-----
+	Move from master branch to main branch.
+	ex:
+		git branch --move master main 	
+
+
+step8:
+-----
+	Add the data to staging area.
+	ex:
+		git add . 
+
+step9:
+-----
+	Check the status.
+	ex:
+		git status 
+
+step10:
+------
+	commit the changes.
+	ex:
+		git commit -m "my first commit";
+
+step11:
+------
+	Add remote origin.
+	ex:
+		git remote add origin https://github.com/NiyazulHasan/javaproject
+
+
+step12:
+------
+	Check remote origin add or not.
+	ex:
+		git remote -v
+
+step13:
+-----
+	Push the code.
+	ex:
+		git push -f origin main 
+
+step14:
+-------
+	Refresh the remote repository and check the code.
+	ex:
+		https://github.com/NiyazulHasan/javaproject
+
+
+How to pull the code from GITHUB
+=================================
+step1:
+-----
+	Create a folder on desktop i.e demo.
+
+step2:
+-----
+	Initialize the empty git repository using git bash.
+	ex:
+		git init
+step3:
+------
+	Create a pull request.
+	ex:
+		git pull https://github.com/NiyazulHasan/javaproject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

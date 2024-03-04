@@ -1,0 +1,150 @@
+Java Project Development 
+========================
+
+Project Title 	: 	Employee Management System 
+
+Environments	:	Core Java 8, ReactJS, Spring Boot.
+
+Database	:	MySQL Database 
+
+Tools		:	MAVEN, POSTMAN and GIT/GITHUB
+
+IDE's		:	VSC and STS/Intellij 
+
+Client		:	Codru, Bridgesoft, Winit and etc.
+
+Duration	:	3 Months.
+
+Team Size	:	3 or 4.
+
+
+Backend Application
+====================
+To create backend application in spring boot we need to follow layered architecture.
+
+Diagram: layered-architecture 
+
+project structure
+----------------- 
+backend
+|
+|---src/main/java
+|	|
+	|----com.ihub.www (base package)
+		|
+		|----BackendApplicaiton.java
+	|
+	|----com.ihub.www.controller
+		|
+		|----EmployeeController.java
+	
+	|----com.ihub.www.service
+		|
+		|----EmployeeService.java
+
+	|----com.ihub.www.repo
+		|
+		|----EmployeeRepository.java (Interface)
+
+	|----com.ihub.www.model 
+		|
+		|----Employee.java	
+	|
+	|----com.ihub.www.exception
+		|
+		|----ResourceNotFoundException.java
+
+
+|---src/main/resources
+	|
+	|----application.properties 
+
+|
+|---pom.xml 
+
+
+step1:
+-----
+	Create a spring boot starter project i.e backend.
+	ex:
+		starters : spring web
+			   spring data jpa 
+			   lombok 
+			   mysql driver 
+
+step2:
+-----
+	Create a schema in mysql database i.e "employee_management_system".	
+	ex:
+		mysql> create schema employee_management_system;
+		mysql> use employee_management_system; 
+
+step3:
+-----
+	create a employee table and insert some records.
+	ex:
+		create table employee( 
+					id integer(3) AUTO_INCREMENT,
+					first_name varchar(10),
+					last_name varchar(10),
+					email  varchar(18),
+					primary key(id)
+				);
+		
+		insert into employee values(1,'Alan','Morries','alan@gmail.com');
+		insert into employee values(2,'Erick','Anderson','erick@zoho.com');
+		commit; 
+		select * from employee;
+
+step4:
+-----
+	Create a Employee Model class inside "com.ihub.www.model" package.
+
+Employee.java
+--------------
+package com.ihub.www.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Employee 
+{
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	
+	@Column
+	private String firstName;
+	
+	@Column
+	private String lastName;
+	
+	@Column
+	private String email;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+		
